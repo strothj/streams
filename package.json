@@ -1,0 +1,11 @@
+{
+  "name": "streams",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "url": "git@github.com:strothj/streams.git",
+    "type": "git"
+  },
+  "author": "strothj <jason@jasons.io>",
+  "license": "MIT"
+}
