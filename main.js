@@ -4,6 +4,13 @@ var alpha = new Alphabet();
 var cache = new Cache('alpha1');
 var cache2 = new Cache('alpha2');
 
+const RandomGen = require('./random');
+const randomGen = new RandomGen();
+const NumLogger = require('./num-log');
+const numLogger = new NumLogger();
+const Filter = require('./filter');
+const filter = new Filter();
+
 alpha.pipe(cache);
 (new Alphabet).pipe(cache2);
 
@@ -14,5 +21,7 @@ function logCache() {
   }
 }
 
-cache.on('finish', logCache);
-cache2.on('finish', logCache);
+// cache.on('finish', logCache);
+// cache2.on('finish', logCache);
+
+randomGen.pipe(filter).pipe(numLogger);
